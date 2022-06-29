@@ -26,7 +26,7 @@ import kotlinx.coroutines.flow.Flow
 interface ForageableDao {
 
     // TOD: implement a method to retrieve all Forageables from the database
-    @Query("SELECT * FROM forageable")
+    @Query("SELECT * FROM forageable ORDER BY name ASC")
     fun getAllForageables(): Flow<List<Forageable>>
 
     // TOD: implement a method to retrieve a Forageable from the database by id
